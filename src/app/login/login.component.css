@@ -1,0 +1,41 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(../../assets/fonts/Frutiger-LT-55-Roman.ttf);
+  }
+  
+  .bod{
+    font-family: myFirstFont !important;
+    border: 1px solid rgba(7,45,100, 0.95);
+color: white;
+width: 50%;
+margin: 0 auto;
+padding: 30px;
+background-color: rgba(7,45,100, 0.95);
+margin-top: 50px
+  }
+
+  .former{
+    width: 25%;
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width: 600px) {
+
+    .former{
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .bod{
+        font-family: myFirstFont !important;
+        border: 1px solid rgba(7,45,100, 0.95);
+    color: white;
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: rgba(7,45,100, 0.95);
+    margin-top: 50px
+      }
+
+
+  }

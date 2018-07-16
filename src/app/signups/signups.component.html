@@ -1,0 +1,91 @@
+<!--  -->
+
+
+<div class="bod">
+  <div *ngIf="!changed">
+  <p style="cursor: pointer;">
+    <img src="../../assets/deafaultlogo.png" width="150px" />
+  </p>
+  <p class="update" (click)="showupdate()">
+    Update Password
+  </p>
+
+
+
+  <div *ngIf="updater">
+
+    <form class="form-inline" #signupForm="ngForm" (ngSubmit)="registerUser(signupForm)">
+      <div class="form-group mb-2">
+        <label for="username" class="sr-only">Username</label>
+        <input type="text" name="username" class="form-control" id="username" placeholder="Username" ngModel>
+      </div>
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="inputPassword2" class="sr-only">Password</label>
+        <input type="password" name="password" class="form-control" id="inputPassword2" placeholder="Password" ngModel>
+      </div>
+      <button style="background-color: rgba(7,45,100, 0.95); color: white; border: none" type="submit" class="btn btn-primary mb-2">Update</button>
+    </form>
+    <p style="text-align: left">
+      {{updateError}}
+    </p>
+
+    <u (click)="hideupdate()">Hide Update</u>
+
+  </div>
+
+
+
+  <p style="    color: white;
+  text-align: center;
+  font-size: 30px;
+  text-decoration: underline;">
+    SIGNUP LIST
+  </p>
+  <table class="former">
+    <thead class="thead" style="background-color: white;
+    color: rgba(7,45,100, 0.95);">
+      <tr>
+        <th scope="col">#</th>
+        <th>Full Name</th>
+        <th>Email</th>
+        <th>Phone Number</th>
+        <th>Account Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Larry</td>
+        <td>Test@gmail.com</td>
+        <td>0903 000 0000</td>
+        <td>Current</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>John Doe</td>
+        <td>Test@gmail.com</td>
+        <td>0903 000 0000</td>
+        <td>Savings</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>Test@gmail.com</td>
+        <td>0903 000 0000</td>
+        <td>Current</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p style="text-align: center; margin: 50px; ">
+    <button style="border: 1px solid; cursor: pointer;" onclick="exportTableToCSV('members.csv')">EXPORT TABLE</button>
+  </p>
+  </div>
+
+  <div *ngIf="changed">
+    <div style="text-align: center">
+<p>Password has been changed</p>
+<u routerLink="/login">click to log in again</u>
+</div>
+  </div>
+</div>

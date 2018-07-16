@@ -1,0 +1,208 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(../../assets/fonts/Frutiger-LT-55-Roman.ttf);
+  }
+  
+  .bod{
+    background-color  :	rgba(7,45,100, 0.95);
+  
+  
+    color: white;
+    font-family: myFirstFont !important;
+
+    padding-bottom: 50px;
+  }
+
+.initialdiv{
+    width: 86%; margin: 0 auto
+}
+.first{
+    /* border: 1px solid white;  */
+    background-color: 	#EDEDED;
+}
+.second{
+    /* border: 1px solid white;  */
+    background-color: 	#E0AD0F;
+}
+.third{
+    /* border: 1px solid white;  */
+    background-color: 		#072D64;
+}
+
+.secondb{
+    background-color: 		#072D64;
+}
+
+.inner{
+    margin-top: 80px;
+    margin-bottom: 80px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.inner2{
+    margin-top: 80px;
+    margin-bottom: 80px;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+.butn{
+    background-color: #072D64;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    width: 75%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 22px;
+    border-radius: 5px;
+
+   } 
+.fab{
+    font-size: 30px;
+    color: #f4f4f4;
+}
+#outer-circle {
+    
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    position: relative;
+    border: 5px solid #E0AD0F;
+    /* 
+     Child elements with absolute positioning will be 
+     positioned relative to this div 
+    */
+  }
+  #outer-circle-white {
+
+    
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    position: relative;
+    border: 5px solid #fff;
+    /* 
+     Child elements with absolute positioning will be 
+     positioned relative to this div 
+    */
+  }
+
+  #inner-circle {
+    position: absolute;
+    background: #E0AD0F;
+    border-radius: 50%;
+    height: 16px;
+    width: 16px;
+    /*
+     Put top edge and left edge in the center
+    */
+    top: 50%;
+    left: 50%;
+    margin: -8px 0px 0px -8px;
+    /* 
+     Offset the position correctly with
+     minus half of the width and minus half of the height 
+    */
+  }
+
+  label{
+    font-size: 13px;
+  }
+  ::placeholder{
+    color: #2699FB ;
+  }
+  select option {
+    color: #2699FB ;
+}
+ .firstul ul{
+    list-style-image: url('../../assets/Ellipse1.png');
+ }
+ .secondul ul{
+    list-style-image: url('../../assets/Ellipse3.png');
+ }
+ .logos{
+    width:200px;
+    cursor: pointer;
+ }
+ .thirds{
+    width: 50%;
+    margin: 0 auto;
+    background-color: #E0AD0F;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+ }
+ .thirdsb{
+    width: 50%;
+    margin: 0 auto;
+    background-color: #FEFEFE;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+ }
+ .former{
+    width: 70%;
+    margin: 0 auto; color: white;
+margin-top: 70px;
+margin-bottom: 10px; font-size: 18px;   
+     
+}
+.trans {
+    width: 20%;
+    margin: 0 auto;
+    padding-top: 40px;
+  }
+     
+  
+@media screen and (max-width: 600px) {
+    .mat{
+        width: 33% !important;
+    }
+    .trans {
+        width: 50%;
+        margin: 0 auto;
+        padding-top: 40px;
+      }
+      
+   .butn{
+    background-color: #072D64;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    width: 75%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 12px;
+    border-radius: 5px;
+
+   } 
+   .initialdiv{
+    width: 100%; margin: 0 auto
+}
+.logos{
+    width:200px;
+ }
+ .thirds{
+    width: 100%;
+    margin: 0 auto;
+    background-color: #E0AD0F;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+ }
+ .thirdsb{
+    width: 95%;
+    margin: 0 auto;
+    background-color: #FEFEFE;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+ }
+ .former{
+    width: 100%;
+    margin: 0 auto; color: white;
+margin-top: 70px;
+margin-bottom: 10px; font-size: 18px;   
+ }
+  }

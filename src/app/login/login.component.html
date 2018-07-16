@@ -1,0 +1,28 @@
+<div class="bod">
+<p style="cursor: pointer;">
+    <img src="../../assets/deafaultlogo.png" width="150px" />
+  </p>
+<p style="    color: white;
+text-align: center;
+font-size: 30px;
+text-decoration: underline;">
+  ADMIN LOGIN
+</p>
+
+    <form #signupForm="ngForm" (ngSubmit)="registerUser(signupForm)" class="former">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" name="email" #email id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" ngModel required>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" name="password" #password id="exampleInputPassword1" placeholder="Password" ngModel required>
+  </div>
+  <p style="text-align: center">
+  <button type="submit" style="background-color: rgba(7,45,100); border: none" class="btn btn-primary">Login</button>
+</p>
+</form>
+<p style="text-align: center">
+{{error}}
+</p>
+</div>

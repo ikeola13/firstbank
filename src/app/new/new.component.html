@@ -1,0 +1,324 @@
+
+  <div class="bod">
+
+
+  <div style=" background-color: #12366B">
+    <p class="header" (click)="default()">
+      <img src="../../assets/deafaultlogo.png" width="200px" />
+    </p>
+    </div>
+
+    <div *ngIf="top">
+
+  <div style="text-align: center">
+    <img src="../../assets/first-bank-extras-2f (1).png" class="image-width"/>
+
+    <div style="padding-bottom:  50px;padding-top: 50px;">
+      <p class="all">
+       <b> It's All About You.</b>
+      </p>
+      <p class="serve">
+          We want to serve you the only banking experience that revolves around <b>YOU</b>. 
+
+          <br><br>
+
+          In less than three steps, you can start enjoying these services.
+      </p>
+      
+    </div>
+  </div>
+
+
+  <div class="areyou">
+    <img src="../../assets/step1.png" class="stepimage"/>
+
+    <p class="areyouhead">
+     <b> Are you a FirstBank customer? </b>
+    </p>
+    <p class="areyouhead2">
+      This means you have an active account with FirstBank and you have made a transaction with it.
+    </p>
+    <div class="row trans">
+      <div class="col-sm mat">
+          <a href="#custrue">
+        <div class="customera" (click)="iamcustomer()">
+          I AM A CUSTOMER
+
+        </div>
+        </a>
+
+      </div>
+      <div class="col-sm mat">
+          <a href="#cusnottrue">
+        <div class="customerb"(click)="iamnotcustomer()" >
+          NOT A CUSTOMER
+
+        </div>
+        </a>
+
+        </div>
+
+    </div>
+
+  </div>
+
+  </div>
+
+
+  <div class="doyou" *ngIf="step2a" id="custrue">
+    <img src="../../assets/step2.png" class="stepimage"/>
+
+    <p class="apphead">
+       <b>Do you use the FirstMobile App?</b>
+    </p>
+    <p class="appbody">
+      With the FirstMobile App, you are enabled to the following and much more:
+    </p>
+    <ul class="applist">
+            <li>
+              Buy Airtime.
+            </li>
+            <li>
+              Pay Bills.
+            </li>
+          </ul>
+    <div class="row" class="appbtn">
+      
+       <a href="#mobiletrue">
+        <div class="appbtntest" (click)="iusemobile()">
+         I USE THE FIRSTMOBILE APP
+
+        </div>
+      </a>
+
+        
+
+    </div>
+
+    <p class="appwarn">
+      If you don't use FirstMobile, you can download it right from your play store. 
+
+    </p>
+
+    <div class="row trans2">
+            <div class="col-sm mat">
+                <a href="https://itunes.apple.com/ng/app/firstmobile-app/id1039809331?mt=8" target="_blank"><img src="../../assets/downapple.png"class="logos"/> </a>
+
+            </div>
+            <div class="col-sm mat">
+                <a href="https://play.google.com/store/apps/details?id=com.firstbank.firstmobile&hl=en" target="_blank"><img src="../../assets/downplay.png"class="logos"/> </a>
+              </div>
+            
+          </div>
+
+  </div>
+  <div class="doyou2" *ngIf="step2b" id="cusnottrue">
+      <img src="../../assets/step2.png" class="stepimage"/>
+  
+      <p class="doyouhead">
+        <b> Welcome to the online account opening form.</b>
+      </p>
+      <p class="doyoubody">
+        We want to help you start enjoying he best banking services by creating convenience for your transactions ,
+        empowering your businesses and offering flexibility of choice.
+        <Br><br>
+          We would love to get to know you, so we know how best to serve you.
+      </p>
+
+      <form #signupForm="ngForm" (ngSubmit)="registerUser(signupForm)" class="former">
+          <p style="color: #12366B; font-size: 20px">
+              <b>Personal Information</b>
+            </p>
+            
+          <div class="form-group" style="color: gray">
+              <label for="exampleInputName">FULL NAME</label>
+              <input type="text" class="form-control" name="fullname" id="fullname"  placeholder="Chioma David" ngModel >
+              
+            </div>
+                    <div class="form-group" style="color: gray">
+                      <label for="exampleInputEmail1">EMAIL</label>
+                      <input type="email" name="email" class="form-control" id="email"  placeholder="you@probablygmail.com" ngModel >
+                      
+                    </div>
+                    <div class="form-group" style="color: gray">
+                      <label for="exampleInputPhone">PHONE NUMBER</label>
+                      <input type="number" name="phone" class="form-control" id="phone" placeholder="0903 000 0000" ngModel >
+                    </div>
+                    <div class="form-group" style="color: gray">
+                        <label  for="inlineCheckbox1">ACCOUNT TYPE</label>
+                        <select style="text-align: center;height: 70px;"  name="type"  class="form-control" id="exampleFormControlSelect1"  ngModel>
+                            <option style="color: #12366B" value="">Select Account Type</option>
+                            <option value="savings">Savings</option>
+                            <option value="current">Current</option>
+                            
+                          </select>
+                       
+                      </div>
+       <p class="doyoubtn">
+                    <button  type="submit" class="btn btn-primary" style="width: 100%;
+                    height: 50px;
+                    background-color: #12366B;
+                    color: white;
+                    font-size: 25px;
+                    cursor: pointer;">START</button>
+                  </p>
+                  </form>
+                  <p style="text-align: center">
+                      {{error}}
+                    </p>
+                    
+  
+      
+  
+  
+  
+    </div>
+
+   <div class="haveyou" *ngIf="havey" id="mobiletrue">
+    <img src="../../assets/step3.png" class="stepimage"/>
+
+    <p class="havehead">
+     <b> Have you used *894#? </b>
+    </p>
+    <p style="margin-top: 50px">
+        With the FirstMobile USSD code, you are enabled to do these and more:
+    </p>
+    <ul class="havelist">
+            <li>
+              Send Money.
+            </li>
+            <li>
+              Buy Airtime
+            </li>
+            <li>
+              Pay Bills.
+            </li>
+          </ul>
+    <div class="row trans3">
+      <div class="col-sm mat">
+        <a href="#finallyy2">
+        <div class="havebtn1" (click)="finally2()">
+          I USE *894#
+
+        </div>
+      </a>
+
+      </div>
+      <div class="col-sm mat">
+        <div class="havebtn2">
+          LEARN ABOUT *894#
+
+        </div>
+
+        </div>
+
+    </div>
+
+
+  </div>
+
+  
+
+
+      
+
+        <div *ngIf="final" id="finallyy">
+            <div class="thirdsb">
+            
+                  <p style="    text-align: center;
+                  color: #072D64;
+                  font-size: 40px;
+                  line-height: 50px;
+                  margin-bottom: 50px;
+                  width: 67%;
+                  margin: 0 auto;">
+                  <b> Yay! You're almost there
+                    </b>
+                  </p>
+            
+                 
+      
+                  <p style="    width: 67%;
+                  margin: 0 auto;
+                  color: #646464;
+                  margin-top: 70px;
+                  margin-bottom: 10px;
+                  font-size: 18px;
+                  text-align: left;">
+              Next steps, we will get more information regarding your 
+                    BVN and identification. Just some paper work we need to
+                    sort out before we begin. 
+                    
+                    <br>
+                    <br>
+                    
+                    Please read through and then
+                    we can really start.
+                  </p>
+            
+                  <p style="font-size: 18px;
+              padding-top: 20px; color: #072D64;">
+                    <u>Continue Later</u>
+                  </p>
+      
+                  <p style="margin-top: 30px">
+                      <button type="submit" class="btn btn-primary" style="    width: 50%;
+                      height: 50px;
+                      background-color: #072D64;
+                      color: white;
+                      font-size: 25px; cursor: pointer;">NEXT</button>
+                  </p>
+            
+                  
+            
+                </div>
+            
+      
+        </div>
+        <div *ngIf="final2" id="finallyy2">
+            <div class="thirds" >
+        
+              <p style="    color: #072D64;
+          font-size: 40px;
+          line-height: 50px;">Thank You For Letting Us Put YouFirst</p>
+        
+              <p style="font-size: 18px;
+              padding-top: 20px;
+              color: gray;
+              width: 80%;
+              margin: 0 auto;">
+        
+                For regular freebies, updates on our products & services, 
+               follow us on all of social media platforms. 
+        
+              </p>
+        
+              
+        
+              <div class="row trans4" style="width: 47%;
+          margin: 0 auto;
+          padding-top: 50px; color: #F4F4F4">
+                <div class="col-sm mats" style="cursor: pointer;">
+                  <a href="https://www.instagram.com/firstbanknigeria/" target="_blank"> <i class="fab fa-instagram"></i> </a>
+                </div>
+                <div class="col-sm mats" style="cursor: pointer;">
+                  <a href="https://twitter.com/firstbankngr" target="_blank"> <i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="col-sm mats" style="cursor: pointer;">
+                 <a href="https://www.facebook.com/firstbankofnigeria/" target="_blank"> <i class="fab fa-facebook-f"></i></a>
+                </div>
+        
+              </div>
+        
+            </div>
+        
+            
+          </div>
+      
+        <div class="footer">
+            <p class="emptyheader">
+              
+              bottom
+            </p>
+            </div>
+    </div>
